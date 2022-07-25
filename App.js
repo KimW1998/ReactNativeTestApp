@@ -20,7 +20,7 @@ export default function App() {
   function addGoalHandler() {
     setCourseGoals((currentCourseGoals) => [
       ...currentCourseGoals,
-      {text: enteredGoalText, key: Math.random().toString()},
+      { text: enteredGoalText, key: Math.random().toString() },
     ]);
   }
 
@@ -40,7 +40,7 @@ export default function App() {
           renderItem={(itemData) => {
             return (
               <View style={styles.goalItem}>
-                <Text style={styles.goalText}>{itemData.item}</Text>
+                <Text style={styles.goalText}>{itemData.item.text}</Text>
               </View>
             );
           }}
